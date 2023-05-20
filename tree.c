@@ -4,7 +4,8 @@
 #include <thread.h>
 #include <9p.h>
 
-void print_tree(char *basepath, int depth, char *prefix, int max_depth)
+void
+print_tree(char *basepath, int depth, char *prefix, int max_depth)
 {
     Dir *dirs;
     int i, n, fd;
@@ -49,7 +50,8 @@ void print_tree(char *basepath, int depth, char *prefix, int max_depth)
     close(fd);
 }
 
-void main(int argc, char *argv[])
+void
+main(int argc, char *argv[])
 {
     int max_depth = -1;
     char *start_dir = ".";
@@ -71,3 +73,4 @@ void main(int argc, char *argv[])
     print_tree(start_dir, 0, "", max_depth);
     exits(0);
 }
+
